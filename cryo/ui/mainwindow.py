@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'mainwindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(518, 273)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.pushButton1 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton1.setGeometry(QtCore.QRect(210, 10, 161, 51))
+        self.pushButton1.setObjectName("pushButton1")
+        self.label1 = QtWidgets.QLabel(self.centralwidget)
+        self.label1.setGeometry(QtCore.QRect(260, 80, 201, 21))
+        self.label1.setObjectName("label1")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(30, 0, 191, 21))
+        self.label.setObjectName("label")
+        self.TempDisplay = QtWidgets.QLCDNumber(self.centralwidget)
+        self.TempDisplay.setGeometry(QtCore.QRect(300, 110, 151, 61))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(219, 216, 193))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(219, 216, 193))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(236, 236, 236))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        self.TempDisplay.setPalette(palette)
+        font = QtGui.QFont()
+        font.setPointSize(24)
+        self.TempDisplay.setFont(font)
+        self.TempDisplay.setObjectName("TempDisplay")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(380, 20, 71, 16))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(50, 80, 141, 31))
+        self.label_3.setObjectName("label_3")
+        self.settempbox = QtWidgets.QSpinBox(self.centralwidget)
+        self.settempbox.setGeometry(QtCore.QRect(70, 110, 71, 41))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.settempbox.setFont(font)
+        self.settempbox.setMinimum(80)
+        self.settempbox.setMaximum(300)
+        self.settempbox.setObjectName("settempbox")
+        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox.setGeometry(QtCore.QRect(40, 20, 151, 31))
+        self.comboBox.setObjectName("comboBox")
+        self.settempbutton = QtWidgets.QPushButton(self.centralwidget)
+        self.settempbutton.setGeometry(QtCore.QRect(30, 150, 141, 31))
+        self.settempbutton.setObjectName("settempbutton")
+        self.quitbutton = QtWidgets.QPushButton(self.centralwidget)
+        self.quitbutton.setGeometry(QtCore.QRect(330, 190, 113, 32))
+        self.quitbutton.setObjectName("quitbutton")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 518, 22))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pushButton1.setText(_translate("MainWindow", "Check connection"))
+        self.label1.setText(_translate("MainWindow", "Measured temp (internal sensor)"))
+        self.label.setText(_translate("MainWindow", "device path (ex: /dev/ttyUSB)"))
+        self.label_2.setText(_translate("MainWindow", "Connected"))
+        self.label_3.setText(_translate("MainWindow", "Target Temperature"))
+        self.settempbutton.setText(_translate("MainWindow", "Set Temperature"))
+        self.quitbutton.setText(_translate("MainWindow", "quit"))
